@@ -1,6 +1,12 @@
 FastClick.attach(document.body);
 !function(desW){
     var winW=document.documentElement.clientWidth;
+     var oMain=document.getElementsByClassName('main')[0];
+    if(winW>desW){
+        oMain.style.width=desW+'px';
+        oMain.style.margin="0 auto";
+        return;
+    }
     document.documentElement.style.fontSize=winW/desW*100+"px";
 }(640)
 var mySwiper=new Swiper(".swiper-container",{
